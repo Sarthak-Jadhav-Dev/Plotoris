@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { Calendar, Home, Inbox, Search, Settings, Sparkles } from "lucide-react"
 import Link from "next/link"
 
 import {
@@ -47,6 +47,11 @@ const items = [
         icon: Search,
     },
     {
+        title: "Demo",
+        url: "/demo",
+        icon: Sparkles,
+    },
+    {
         title: "Settings",
         url: "/settings",
         icon: Settings,
@@ -75,23 +80,23 @@ export function AppSidebar() {
                     </SidebarGroupContent>
                 </SidebarGroup>
                 <SidebarGroup>
-                <Command className="max-w-sm rounded-lg border">
-                    <CommandInput placeholder="Type a command or search..." />
-                    <CommandList>
-                        <CommandEmpty>No results found.</CommandEmpty>
-                        <CommandGroup heading="Suggestions">
-                            <CommandItem>Calendar</CommandItem>
-                            <CommandItem>Search Emoji</CommandItem>
-                            <CommandItem>Calculator</CommandItem>
-                        </CommandGroup>
-                        <CommandSeparator />
-                        <CommandGroup heading="Settings">
-                            <CommandItem>Profile</CommandItem>
-                            <CommandItem>Billing</CommandItem>
-                            <CommandItem>Settings</CommandItem>
-                        </CommandGroup>
-                    </CommandList>
-                </Command>
+                    <Command className="max-w-sm rounded-lg border">
+                        <CommandInput placeholder="Type a command or search..." />
+                        <CommandList>
+                            <CommandEmpty>No results found.</CommandEmpty>
+                            <CommandGroup heading="Suggestions">
+                                <CommandItem>Calendar</CommandItem>
+                                <CommandItem>Search Emoji</CommandItem>
+                                <CommandItem>Calculator</CommandItem>
+                            </CommandGroup>
+                            <CommandSeparator />
+                            <CommandGroup heading="Settings">
+                                <CommandItem>Profile</CommandItem>
+                                <CommandItem>Billing</CommandItem>
+                                <CommandItem>Settings</CommandItem>
+                            </CommandGroup>
+                        </CommandList>
+                    </Command>
                 </SidebarGroup>
             </SidebarContent>
         </Sidebar>
